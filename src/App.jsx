@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { racingSeries, getRacesBySeries } from './raceData';
+import { racingSeries, getRacesBySeries, LAST_UPDATED } from './raceData';
 import { downloadICS } from './calendarUtils';
 import { getUserTimezone, commonTimezones, formatRaceDateTime, getTimezoneAbbr } from './timezoneUtils';
 import './App.css';
@@ -7,6 +7,21 @@ import './App.css';
 function App() {
   const [selectedSeries, setSelectedSeries] = useState(['f1', 'imsa', 'wec', 'wrc']);
   const [userTimezone, setUserTimezone] = useState(getUserTimezone());
+  const [theme, setTheme] = useState(() => {
+    // Check localStorage for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme || 'light';
+  });
+
+  // Apply theme to document
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+  };
 
   const filteredRaces = useMemo(() => {
     return getRacesBySeries(selectedSeries);
@@ -55,8 +70,22 @@ function App() {
 
   const racesByMonth = groupRacesByMonth();
 
+  const formatLastUpdated = () => {
+    const date = new Date(LAST_UPDATED);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+
   return (
     <div className="App">
+      <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+        <span className="theme-toggle-icon">{theme === 'light' ? '🌙' : '☀️'}</span>
+        <span>{theme === 'light' ? 'Dark' : 'Light'}</span>
+      </button>
+
       <header className="header">
         <h1>🏁 Global Racing Calendar</h1>
         <p className="subtitle">Your complete motorsport schedule in one place</p>
@@ -137,7 +166,11 @@ function App() {
                     {races.map((race, index) => {
                       const { date, time, isMultiDay } = formatRaceDateTime(race, userTimezone);
                       return (
-                        <div key={`${race.seriesId}-${index}`} className="race-card">
+                        <div 
+                          key={`${race.seriesId}-${index}`} 
+                          className="race-card"
+                          style={{ '--series-color': race.seriesColor }}
+                        >
                           <div 
                             className="race-series-badge" 
                             style={{ backgroundColor: race.seriesColor }}
@@ -163,6 +196,7 @@ function App() {
 
       <footer className="footer">
         <p>Download your personalized racing calendar • All times shown in your selected timezone</p>
+        <p className="last-updated">Last updated: {formatLastUpdated()}</p>
       </footer>
     </div>
   );

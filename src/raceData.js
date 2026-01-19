@@ -1,5 +1,8 @@
 // 2026 race schedules with UTC times for all series
 // All times stored in UTC for proper timezone conversion
+// Last updated: January 19, 2026
+
+export const LAST_UPDATED = '2026-01-19T00:00:00Z';
 
 export const racingSeries = {
   f1: {
@@ -36,7 +39,7 @@ export const racingSeries = {
   imsa: {
     id: 'imsa',
     name: 'IMSA WeatherTech SportsCar Championship',
-    color: '#003087',
+    color: '#1E90FF', // Changed from #003087 (dark blue) to Dodger Blue - much more visible on dark backgrounds
     races: [
       { name: 'Rolex 24 at Daytona', location: 'Daytona', dateTimeUTC: '2026-01-24T18:40:00Z', endDateTimeUTC: '2026-01-25T18:40:00Z', timezone: 'America/New_York' }, // 24hr race
       { name: '12 Hours of Sebring', location: 'Sebring', dateTimeUTC: '2026-03-21T15:00:00Z', endDateTimeUTC: '2026-03-22T03:00:00Z', timezone: 'America/New_York' }, // 12hr race
