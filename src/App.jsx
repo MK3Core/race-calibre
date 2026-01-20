@@ -36,6 +36,13 @@ function App() {
       }
     });
   };
+  const toggleAllSeries = () => {
+    if (selectedSeries.length === Object.keys(racingSeries).length) {
+      setSelectedSeries([]);
+    } else {
+      setSelectedSeries(Object.keys(racingSeries));
+    }
+  };
 
   const handleDownload = () => {
     if (filteredRaces.length === 0) {
@@ -96,6 +103,18 @@ function App() {
           <div className="series-selector">
             <h2>Racing Series</h2>
             <div className="series-list">
+              {/* "All" checkbox */}
+              <label className="series-checkbox series-checkbox-all"
+                style={{ '--series-color': '#64748b' }}
+              >
+                <input
+                  type="checkbox"
+                  checked={selectedSeries.length === Object.keys(racingSeries).length}
+                  onChange={() => toggleAllSeries()}
+                />
+                <span className="checkbox-custom"></span>
+                <span className="series-name">All Series</span>
+              </label>
               {Object.values(racingSeries).map(series => (
                 <label 
                   key={series.id} 

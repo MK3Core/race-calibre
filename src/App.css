@@ -196,6 +196,17 @@ body {
   border: 1px solid transparent;
 }
 
+.series-checkbox-all {
+  border-bottom: 1px solid var(--border-primary);
+  padding-bottom: .75rem;
+  margin-bottom: 0.5rem;
+}
+
+.series-checkbox-all .series-name {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
 [data-theme="dark"] .series-checkbox {
   border-radius: 6px;
 }
