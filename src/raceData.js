@@ -39,7 +39,7 @@ export const racingSeries = {
   imsa: {
     id: 'imsa',
     name: 'IMSA WeatherTech SportsCar Championship',
-    color: '#1E90FF', // Changed from #003087 (dark blue) to Dodger Blue - much more visible on dark backgrounds
+    color: '#0077B6', // Changed from #003087 (dark blue) to Dodger Blue - much more visible on dark backgrounds
     races: [
       { name: 'Rolex 24 at Daytona', location: 'Daytona', dateTimeUTC: '2026-01-24T18:40:00Z', endDateTimeUTC: '2026-01-25T18:40:00Z', timezone: 'America/New_York' }, // 24hr race
       { name: '12 Hours of Sebring', location: 'Sebring', dateTimeUTC: '2026-03-21T15:00:00Z', endDateTimeUTC: '2026-03-22T03:00:00Z', timezone: 'America/New_York' }, // 12hr race
@@ -57,7 +57,7 @@ export const racingSeries = {
   wec: {
     id: 'wec',
     name: 'FIA World Endurance Championship',
-    color: '#00A9E0',
+    color: '#F77F00',
     races: [
       { name: '1812km of Qatar', location: 'Lusail', dateTimeUTC: '2026-03-28T13:00:00Z', timezone: 'Asia/Qatar' },
       { name: '6 Hours of Imola', location: 'Imola', dateTimeUTC: '2026-04-19T11:00:00Z', endDateTimeUTC: '2026-04-19T17:00:00Z', timezone: 'Europe/Rome' }, // 6hr race
@@ -72,7 +72,7 @@ export const racingSeries = {
   wrc: {
     id: 'wrc',
     name: 'FIA World Rally Championship',
-    color: '#C8102E',
+    color: '#2A9D8F',
     races: [
       { name: 'Rally Monte-Carlo', location: 'Monaco', dateTimeUTC: '2026-01-22T08:00:00Z', endDateTimeUTC: '2026-01-25T16:00:00Z', timezone: 'Europe/Monaco' }, // Multi-day event
       { name: 'Rally Sweden', location: 'Umeå', dateTimeUTC: '2026-02-12T08:00:00Z', endDateTimeUTC: '2026-02-15T16:00:00Z', timezone: 'Europe/Stockholm' },

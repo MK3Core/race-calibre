@@ -175,7 +175,7 @@ function App() {
                             className="race-series-badge" 
                             style={{ backgroundColor: race.seriesColor }}
                           >
-                            {race.seriesName.split(' ')[0]}
+                            {race.seriesId.toUpperCase()}
                           </div>
                           <div className="race-details">
                             <div className="race-date">{date}</div>
