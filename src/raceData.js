@@ -9,6 +9,7 @@ export const racingSeries = {
     id: 'f1',
     name: 'Formula 1',
     color: '#E10600',
+    calUrl: 'https://www.formula1.com/en/racing/2026',
     races: [
       { name: 'Australian Grand Prix', location: 'Melbourne', dateTimeUTC: '2026-03-08T04:00:00Z', timezone: 'Australia/Melbourne' },
       { name: 'Chinese Grand Prix', location: 'Shanghai', dateTimeUTC: '2026-03-15T07:00:00Z', timezone: 'Asia/Shanghai' },
@@ -39,7 +40,8 @@ export const racingSeries = {
   imsa: {
     id: 'imsa',
     name: 'IMSA WeatherTech SportsCar Championship',
-    color: '#0077B6', // Changed from #003087 (dark blue) to Dodger Blue - much more visible on dark backgrounds
+    color: '#0077B6',
+    calUrl: 'https://www.imsa.com/weathertech/weathertech-2026-schedule/',
     races: [
       { name: 'Rolex 24 at Daytona', location: 'Daytona', dateTimeUTC: '2026-01-24T18:40:00Z', endDateTimeUTC: '2026-01-25T18:40:00Z', timezone: 'America/New_York' }, // 24hr race
       { name: '12 Hours of Sebring', location: 'Sebring', dateTimeUTC: '2026-03-21T15:00:00Z', endDateTimeUTC: '2026-03-22T03:00:00Z', timezone: 'America/New_York' }, // 12hr race
@@ -58,6 +60,7 @@ export const racingSeries = {
     id: 'wec',
     name: 'FIA World Endurance Championship',
     color: '#F77F00',
+    calUrl: 'https://www.fiawec.com/en/',
     races: [
       { name: '1812km of Qatar', location: 'Lusail', dateTimeUTC: '2026-03-28T13:00:00Z', timezone: 'Asia/Qatar' },
       { name: '6 Hours of Imola', location: 'Imola', dateTimeUTC: '2026-04-19T11:00:00Z', endDateTimeUTC: '2026-04-19T17:00:00Z', timezone: 'Europe/Rome' }, // 6hr race
@@ -73,6 +76,7 @@ export const racingSeries = {
     id: 'wrc',
     name: 'FIA World Rally Championship',
     color: '#2A9D8F',
+    calUrl: 'https://www.wrc.com/en/calendar?rb3TabId=upcoming',
     races: [
       { name: 'Rally Monte-Carlo', location: 'Monaco', dateTimeUTC: '2026-01-22T08:00:00Z', endDateTimeUTC: '2026-01-25T16:00:00Z', timezone: 'Europe/Monaco' },
       { name: 'Rally Sweden', location: 'Umeå', dateTimeUTC: '2026-02-12T08:00:00Z', endDateTimeUTC: '2026-02-15T16:00:00Z', timezone: 'Europe/Stockholm' },
