@@ -161,7 +161,7 @@ function App() {
       </button>
 
       <header className="header">
-        <h1>🏁 Split-Times Racing Calendar</h1>
+        <h1>🏁 Race Calibre</h1>
         <p className="subtitle">Major racing schedules, converted to your timezone, downloadable for your calendar.</p>
       </header>
 
