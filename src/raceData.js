@@ -2,7 +2,7 @@
 // All times stored in UTC for proper timezone conversion
 
 // Last Updated Time
-export const LAST_UPDATED = '2026-01-19T23:18:00-05:00';
+export const LAST_UPDATED = '2026-03-18T22:37:00-05:00';
 
 export const racingSeries = {
   f1: {
