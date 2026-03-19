@@ -640,6 +640,145 @@ body {
   letter-spacing: 0.005em;
 }
 
+/* Results button */
+.results-button {
+  align-self: flex-start;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid var(--series-color);
+  background: transparent;
+  color: var(--series-color);
+  transition: background 0.15s, color 0.15s;
+}
+
+.results-button:hover {
+  background: var(--series-color);
+  color: #fff;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 540px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 1.5rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.modal-close:hover {
+  color: var(--text-primary);
+  background: var(--border-primary);
+}
+
+.modal-header {
+  margin-bottom: 1.25rem;
+  padding-right: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0.5rem 0 0.25rem;
+}
+
+.modal-location {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+.result-class {
+  margin-bottom: 1.25rem;
+}
+
+.result-class:last-child {
+  margin-bottom: 0;
+}
+
+.result-class-name {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.podium {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.podium-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: var(--bg-secondary);
+}
+
+.podium-position {
+  font-size: 1.25rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.podium-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.podium-drivers {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.podium-team {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
 /* Footer */
 .footer {
   background: var(--bg-secondary);

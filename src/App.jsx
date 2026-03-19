@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { racingSeries, getRacesBySeries, LAST_UPDATED } from './raceData';
+import { raceResults } from './raceResults';
 import { downloadICS } from './calendarUtils';
 import { getUserTimezone, commonTimezones, formatRaceDateTime, getTimezoneAbbr } from './timezoneUtils';
 import './App.css';
@@ -9,6 +10,7 @@ function App() {
   const [userTimezone, setUserTimezone] = useState(getUserTimezone());
   const [collapsedMonths, setCollapsedMonths] = useState(new Set());
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [resultModal, setResultModal] = useState(null); // { race, result }
   const [theme, setTheme] = useState(() => {
     // Check localStorage for saved theme preference
     const savedTheme = localStorage.getItem('theme');
@@ -300,7 +302,19 @@ function App() {
                   </div>
                   <div className="race-details">
                     <div className="race-date">{date}</div>
-                    <div className="race-time">🕐 {time}</div>
+                    {racePast ? (() => {
+                      const result = raceResults[`${race.seriesId}::${race.name}`];
+                      return result ? (
+                        <button
+                          className="results-button"
+                          onClick={() => setResultModal({ race, result })}
+                        >
+                          Results
+                        </button>
+                      ) : null;
+                    })() : (
+                      <div className="race-time">🕐 {time}</div>
+                    )}
                     <div className="race-name">{race.name}</div>
                     <div className="race-location">📍 {race.location}</div>
                   </div>
@@ -318,6 +332,53 @@ function App() {
           )}
         </main>
       </div>
+
+      {resultModal && (
+        <div className="modal-overlay" onClick={() => setResultModal(null)}>
+          <div className="modal" onClick={e => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setResultModal(null)}>×</button>
+            <div className="modal-header">
+              <div className="race-series-badge" style={{ backgroundColor: resultModal.race.seriesColor }}>
+                {resultModal.race.seriesId.toUpperCase()}
+              </div>
+              <h2 className="modal-title">{resultModal.race.name}</h2>
+              <p className="modal-location">📍 {resultModal.race.location}</p>
+            </div>
+            <div className="modal-body">
+              {resultModal.result.classes ? (
+                resultModal.result.classes.map(cls => (
+                  <div key={cls.className} className="result-class">
+                    <h3 className="result-class-name">{cls.className}</h3>
+                    <div className="podium">
+                      {cls.podium.map(entry => (
+                        <div key={entry.position} className={`podium-entry podium-${entry.position}`}>
+                          <span className="podium-position">{entry.position === 1 ? '🥇' : entry.position === 2 ? '🥈' : '🥉'}</span>
+                          <div className="podium-details">
+                            <span className="podium-drivers">{entry.drivers.join(' — ')}</span>
+                            <span className="podium-team">{entry.team}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="podium">
+                  {resultModal.result.podium.map(entry => (
+                    <div key={entry.position} className={`podium-entry podium-${entry.position}`}>
+                      <span className="podium-position">{entry.position === 1 ? '🥇' : entry.position === 2 ? '🥈' : '🥉'}</span>
+                      <div className="podium-details">
+                        <span className="podium-drivers">{entry.drivers.join(' — ')}</span>
+                        <span className="podium-team">{entry.team}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       <footer className="footer">
         <p>Download your personalized racing calendar • All times shown in your selected timezone</p>
