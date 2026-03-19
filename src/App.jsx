@@ -289,20 +289,22 @@ function App() {
                     >
                       {race.seriesId.toUpperCase()}
                     </div>
-                    {racePast && <span className="race-finished-flag">🏁</span>}
-                    {raceStatus === 'live' && (
+                    {racePast && !race.cancelled && <span className="race-finished-flag">🏁</span>}
+                    {!race.cancelled && raceStatus === 'live' && (
                       <div className="live-badge">
                         <div className="live-dot"></div>
                         LIVE
                       </div>
                     )}
-                    {raceStatus === 'upcoming' && (
+                    {!race.cancelled && raceStatus === 'upcoming' && (
                       <div className="upcoming-badge">UPCOMING</div>
                     )}
                   </div>
                   <div className="race-details">
                     <div className="race-date">{date}</div>
-                    {racePast ? (() => {
+                    {race.cancelled ? (
+                      <div className="race-cancelled">Race Cancelled</div>
+                    ) : racePast ? (() => {
                       const result = raceResults[`${race.seriesId}::${race.name}`];
                       return result ? (
                         <button

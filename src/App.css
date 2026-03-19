@@ -626,6 +626,14 @@ body {
   letter-spacing: 0.01em;
 }
 
+.race-cancelled {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #B00400;
+}
+
 .race-name {
   font-size: 0.95rem;
   color: var(--text-primary);
