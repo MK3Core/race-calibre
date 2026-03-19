@@ -64,7 +64,7 @@ function App() {
       : startTime + (3 * 60 * 60 * 1000);
 
     // Show the "UPCOMING" badge for races starting within the next week.
-    const UPCOMING_WINDOW_MS = 7 * 24 * 60 * 60 * 1000;
+    const UPCOMING_WINDOW_MS = 6 * 24 * 60 * 60 * 1000;
     const upcomingBefore = startTime - UPCOMING_WINDOW_MS;
 
     if (now >= startTime && now <= endTime) {
