@@ -48,6 +48,14 @@ function App() {
     setCollapsedMonths(pastMonths);
   }, [filteredRaces, userTimezone]);
 
+  const isRacePast = (race) => {
+    const now = currentTime.getTime();
+    const endTime = race.endDateTimeUTC
+      ? new Date(race.endDateTimeUTC).getTime()
+      : new Date(race.dateTimeUTC).getTime() + 3 * 60 * 60 * 1000;
+    return now > endTime;
+  };
+
   const getRaceStatus = (race) => {
     const now = currentTime.getTime();
     const startTime = new Date(race.dateTimeUTC).getTime();
@@ -265,10 +273,11 @@ function App() {
             {races.map((race, index) => {
               const { date, time, isMultiDay } = formatRaceDateTime(race, userTimezone);
               const raceStatus = getRaceStatus(race);
+              const racePast = isRacePast(race);
               return (
                 <div
                   key={`${race.seriesId}-${index}`}
-                  className="race-card"
+                  className={`race-card${racePast ? ' race-card-past' : ''}`}
                   style={{ '--series-color': race.seriesColor }}
                 >
                   <div className="race-card-header">
@@ -278,6 +287,7 @@ function App() {
                     >
                       {race.seriesId.toUpperCase()}
                     </div>
+                    {racePast && <span className="race-finished-flag">🏁</span>}
                     {raceStatus === 'live' && (
                       <div className="live-badge">
                         <div className="live-dot"></div>
@@ -285,7 +295,7 @@ function App() {
                       </div>
                     )}
                     {raceStatus === 'upcoming' && (
-                      <div className="upcoming-badge">⬆ UPCOMING</div>
+                      <div className="upcoming-badge">UPCOMING</div>
                     )}
                   </div>
                   <div className="race-details">
