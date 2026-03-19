@@ -11,6 +11,11 @@ function App() {
   const [collapsedMonths, setCollapsedMonths] = useState(new Set());
   const [currentTime, setCurrentTime] = useState(new Date());
   const [resultModal, setResultModal] = useState(null); // { race, result }
+
+  useEffect(() => {
+    document.body.style.overflow = resultModal ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [resultModal]);
   const [theme, setTheme] = useState(() => {
     // Check localStorage for saved theme preference
     const savedTheme = localStorage.getItem('theme');
