@@ -33,17 +33,54 @@ export const raceResults = {
       {
         className: 'GTD Pro',
         podium: [
-          { position: 1, drivers: ['Neil Verhagen', 'Connor De Phillippi', 'Max Hesse', 'Dan Harper'], team: 'Paul Miller Racing (BMW)' },
-          { position: 2, drivers: ['Kenny Habul', 'Maro Engel', 'Chaz Mostert', 'Will Power'], team: '75 Express (Mercedes-AMG)' },
-          { position: 3, drivers: ['Scott Noble', 'Jason Hart', 'Maxime Martin', 'Luca Stolz'], team: 'Winward Racing (Mercedes-AMG)' },
+          { position: 1, drivers: ['Neil Verhagen', 'Connor De Phillippi', 'Max Hesse', 'Dan Harper'], team: 'Paul Miller Racing' },
+          { position: 2, drivers: ['Kenny Habul', 'Maro Engel', 'Chaz Mostert', 'Will Power'], team: '75 Express' },
+          { position: 3, drivers: ['Scott Noble', 'Jason Hart', 'Maxime Martin', 'Luca Stolz'], team: 'Winward Racing' },
         ],
       },
       {
         className: 'GTD',
         podium: [
-          { position: 1, drivers: ['Russell Ward', 'Philip Ellis', 'Indy Dontje', 'Lucas Auer'], team: 'Winward Racing (Mercedes-AMG)' },
-          { position: 2, drivers: ['John Potter', 'Spencer Pumpelly', 'Nicki Thiim', 'Madison Snow'], team: 'Magnus Racing (Aston Martin)' },
-          { position: 3, drivers: ['Tom Gamble', 'Dudu Barrichello', 'Zacharie Robichon', 'Mattia Drudi'], team: 'Heart of Racing (Aston Martin)' },
+          { position: 1, drivers: ['Russell Ward', 'Philip Ellis', 'Indy Dontje', 'Lucas Auer'], team: 'Winward Racing' },
+          { position: 2, drivers: ['John Potter', 'Spencer Pumpelly', 'Nicki Thiim', 'Madison Snow'], team: 'Magnus Racing' },
+          { position: 3, drivers: ['Tom Gamble', 'Dudu Barrichello', 'Zacharie Robichon', 'Mattia Drudi'], team: 'Heart of Racing' },
+        ],
+      },
+    ],
+  },
+
+  'imsa::12 Hours of Sebring': {
+    classes: [
+      {
+        className: 'GTP',
+        podium: [
+          { position: 1, drivers: ['Luiz Felipe Nasr', 'Julien Andlauer', 'Laurin Heinrich'], team: 'Porsche Penske Motorsport' },
+          { position: 2, drivers: ['Laurens Vanthoor', 'Kevin Estre', 'Matthew Campbell'], team: 'Porsche Penske Motorsport' },
+          { position: 3, drivers: ['Jack Aitken', 'Earl Bamber', 'Frederik Vesti'], team: 'Action Express Racing' },
+        ],
+      },
+      {
+        className: 'LMP2',
+        podium: [
+          { position: 1, drivers: ['Philip Fayer', 'Hunter McElrea', 'Mikkel Jensen'], team: 'United Autosports' },
+          { position: 2, drivers: ['Dan Goldburg', 'Paul di Resta', 'Rasmus Lindh'], team: 'United Autosports' },
+          { position: 3, drivers: ['John Farano', 'Tristan Vautier', 'Sebastian Alvarez'], team: 'Tower Motorsports' },
+        ],
+      },
+      {
+        className: 'GTD Pro',
+        podium: [
+          { position: 1, drivers: ['Thomas Preining', 'Klaus Bachler', 'Ricardo Feller'], team: 'Manthey EMA' },
+          { position: 2, drivers: ['Nick Tandy', 'Harry King', 'Alessio Picariello'], team: 'AO Racing' },
+          { position: 3, drivers: ['Tommy Milner', 'Nicky Catsburg', 'Nicolas Varrone'], team: 'Pratt Miller Motorsports' },
+        ],
+      },
+      {
+        className: 'GTD',
+        podium: [
+          { position: 1, drivers: ['Simon Mann', 'Lilou Wadoux', 'Antonio Fuoco'], team: 'AF Corse' },
+          { position: 2, drivers: ['Tom Gamble', 'Dudu Barrichello', 'Zacharie Robichon'], team: 'Heart of Racing' },
+          { position: 3, drivers: ['Adam Adelson', 'Tom Sargent', 'Callum Ilott'], team: 'Wright Motorsports' },
         ],
       },
     ],
