@@ -427,7 +427,7 @@ body {
 }
 
 .month-header-past {
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .month-toggle-icon {
@@ -436,11 +436,11 @@ body {
 }
 
 .month-past {
-  opacity: 0.35;
+  opacity: 0.65;
 }
 
 .month-past .month-header:hover {
-  opacity: 0.65;
+  opacity: 0.85;
 }
 
 [data-theme="dark"] .month-header {
@@ -451,7 +451,7 @@ body {
 }
 
 [data-theme="dark"] .month-header-past {
-  opacity: 0.28;
+  opacity: 0.55;
 }
 
 .races-grid {
@@ -494,7 +494,7 @@ body {
 
 /* Only grey individual past cards when they're NOT already inside a greyed-out past month */
 :not(.month-past) > .races-grid > .race-card-past {
-  opacity: 0.35;
+  opacity: 0.65;
 }
 
 .race-card-past:hover {
