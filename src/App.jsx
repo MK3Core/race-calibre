@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { racingSeries, getRacesBySeries, LAST_UPDATED } from './raceData';
 import { raceResults } from './raceResults';
+import { getCarByNumber } from './raceTeams';
 import { downloadICS } from './calendarUtils';
 import { getUserTimezone, commonTimezones, formatRaceDateTime, getTimezoneAbbr } from './timezoneUtils';
 import './App.css';
@@ -352,36 +353,29 @@ function App() {
               <p className="modal-location">📍 {resultModal.race.location}</p>
             </div>
             <div className="modal-body">
-              {resultModal.result.classes ? (
-                resultModal.result.classes.map(cls => (
-                  <div key={cls.className} className="result-class">
-                    <h3 className="result-class-name">{cls.className}</h3>
-                    <div className="podium">
-                      {cls.podium.map(entry => (
+              {resultModal.result.classes.map(cls => (
+                <div key={cls.className} className="result-class">
+                  <h3 className="result-class-name">{cls.className}</h3>
+                  <div className="podium">
+                    {cls.podium.map(entry => {
+                      const team = getCarByNumber(entry.carNumber, resultModal.race.seriesId, 2026, resultModal.race.name);
+                      return (
                         <div key={entry.position} className={`podium-entry podium-${entry.position}`}>
                           <span className="podium-position">{entry.position === 1 ? '🥇' : entry.position === 2 ? '🥈' : '🥉'}</span>
                           <div className="podium-details">
-                            <span className="podium-drivers">{entry.drivers.join(' — ')}</span>
-                            <span className="podium-team">{entry.team}</span>
+                            <span className="podium-drivers">
+                              {team ? team.drivers.join(' / ') : `Car #${entry.carNumber}`}
+                            </span>
+                            <span className="podium-team">
+                              {team ? team.team : 'Unknown'}
+                            </span>
                           </div>
                         </div>
-                      ))}
-                    </div>
+                      );
+                    })}
                   </div>
-                ))
-              ) : (
-                <div className="podium">
-                  {resultModal.result.podium.map(entry => (
-                    <div key={entry.position} className={`podium-entry podium-${entry.position}`}>
-                      <span className="podium-position">{entry.position === 1 ? '🥇' : entry.position === 2 ? '🥈' : '🥉'}</span>
-                      <div className="podium-details">
-                        <span className="podium-drivers">{entry.drivers.join(' — ')}</span>
-                        <span className="podium-team">{entry.team}</span>
-                      </div>
-                    </div>
-                  ))}
                 </div>
-              )}
+              ))}
             </div>
           </div>
         </div>
