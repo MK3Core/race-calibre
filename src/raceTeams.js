@@ -301,106 +301,362 @@ export const raceTeams = [
   },
 
   // ── F1 ───────────────────────────────────────────────────────────────────
-  {
-    number: 63,
-    series: 'f1',
-    season: 2026,
-    team: 'Mercedes',
-    car_model: 'Mercedes W17',
-    class: 'F1',
-    drivers: ['George Russell'],
-  },
 
-  {
-    number: 12,
-    series: 'f1',
-    season: 2026,
-    team: 'Mercedes',
-    car_model: 'Mercedes W17',
-    class: 'F1',
-    drivers: ['Kimi Antonelli'],
-  },
+// McLaren
+{
+  number: 1,
+  series: 'f1',
+  season: 2026,
+  team: 'McLaren',
+  car_model: 'McLaren MCL40',
+  class: 'F1',
+  drivers: ['Lando Norris'],
+},
+{
+  number: 81,
+  series: 'f1',
+  season: 2026,
+  team: 'McLaren',
+  car_model: 'McLaren MCL40',
+  class: 'F1',
+  drivers: ['Oscar Piastri'],
+},
 
-  {
-    number: 16,
-    series: 'f1',
-    season: 2026,
-    team: 'Ferrari',
-    car_model: 'Ferrari SF-26',
-    class: 'F1',
-    drivers: ['Charles Leclerc'],
-  },
+// Mercedes
+{
+  number: 63,
+  series: 'f1',
+  season: 2026,
+  team: 'Mercedes',
+  car_model: 'Mercedes W17',
+  class: 'F1',
+  drivers: ['George Russell'],
+},
+{
+  number: 12,
+  series: 'f1',
+  season: 2026,
+  team: 'Mercedes',
+  car_model: 'Mercedes W17',
+  class: 'F1',
+  drivers: ['Kimi Antonelli'],
+},
 
-  {
-    number: 44,
-    series: 'f1',
-    season: 2026,
-    team: 'Ferrari',
-    car_model: 'Ferrari SF-26',
-    class: 'F1',
-    drivers: ['Lewis Hamilton'],
-  },
+// Ferrari
+{
+  number: 16,
+  series: 'f1',
+  season: 2026,
+  team: 'Ferrari',
+  car_model: 'Ferrari SF-26',
+  class: 'F1',
+  drivers: ['Charles Leclerc'],
+},
+{
+  number: 44,
+  series: 'f1',
+  season: 2026,
+  team: 'Ferrari',
+  car_model: 'Ferrari SF-26',
+  class: 'F1',
+  drivers: ['Lewis Hamilton'],
+},
 
-  // ── WRC ──────────────────────────────────────────────────────────────────
-  {
-    number: 12,
-    series: 'wrc',
-    season: 2026,
-    team: 'Toyota Gazoo Racing',
-    car_model: 'Toyota GR Yaris Rally1',
-    class: 'WRC',
-    drivers: ['Oliver Solberg', 'Elliott Edmondson'],
-  },
+// Red Bull Racing
+{
+  number: 3,
+  series: 'f1',
+  season: 2026,
+  team: 'Red Bull Racing',
+  car_model: 'Red Bull RB22',
+  class: 'F1',
+  drivers: ['Max Verstappen'],
+},
+{
+  number: 6,
+  series: 'f1',
+  season: 2026,
+  team: 'Red Bull Racing',
+  car_model: 'Red Bull RB22',
+  class: 'F1',
+  drivers: ['Isack Hadjar'],
+},
 
-  {
-    number: 33,
-    series: 'wrc',
-    season: 2026,
-    team: 'Toyota Gazoo Racing',
-    car_model: 'Toyota GR Yaris Rally1',
-    class: 'WRC',
-    drivers: ['Elfyn Evans', 'Scott Martin'],
-  },
+// Williams
+{
+  number: 23,
+  series: 'f1',
+  season: 2026,
+  team: 'Williams',
+  car_model: 'Williams FW48',
+  class: 'F1',
+  drivers: ['Alexander Albon'],
+},
+{
+  number: 55,
+  series: 'f1',
+  season: 2026,
+  team: 'Williams',
+  car_model: 'Williams FW48',
+  class: 'F1',
+  drivers: ['Carlos Sainz'],
+},
 
-  {
-    number: 17,
-    series: 'wrc',
-    season: 2026,
-    team: 'Toyota Gazoo Racing',
-    car_model: 'Toyota GR Yaris Rally1',
-    class: 'WRC',
-    drivers: ['Sébastien Ogier', 'Vincent Landais'],
-  },
+// Racing Bulls
+{
+  number: 30,
+  series: 'f1',
+  season: 2026,
+  team: 'Racing Bulls',
+  car_model: 'Racing Bulls VCARB03',
+  class: 'F1',
+  drivers: ['Liam Lawson'],
+},
+{
+  number: 41,
+  series: 'f1',
+  season: 2026,
+  team: 'Racing Bulls',
+  car_model: 'Racing Bulls VCARB03',
+  class: 'F1',
+  drivers: ['Arvid Lindblad'],
+},
 
-  {
-    number: 18,
-    series: 'wrc',
-    season: 2026,
-    team: 'Toyota Gazoo Racing',
-    car_model: 'Toyota GR Yaris Rally1',
-    class: 'WRC',
-    drivers: ['Takamoto Katsuta', 'Aaron Johnston'],
-  },
+// Aston Martin
+{
+  number: 14,
+  series: 'f1',
+  season: 2026,
+  team: 'Aston Martin',
+  car_model: 'Aston Martin AMR26',
+  class: 'F1',
+  drivers: ['Fernando Alonso'],
+},
+{
+  number: 18,
+  series: 'f1',
+  season: 2026,
+  team: 'Aston Martin',
+  car_model: 'Aston Martin AMR26',
+  class: 'F1',
+  drivers: ['Lance Stroll'],
+},
 
-  {
-    number: 11,
-    series: 'wrc',
-    season: 2026,
-    team: 'Hyundai Shell Mobil 1',
-    car_model: 'Hyundai i20 N Rally1',
-    class: 'WRC',
-    drivers: ['Adrien Fourmaux', 'Alexandre Coria'],
-  },
+// Haas
+{
+  number: 31,
+  series: 'f1',
+  season: 2026,
+  team: 'Haas',
+  car_model: 'Haas VF-26',
+  class: 'F1',
+  drivers: ['Esteban Ocon'],
+},
+{
+  number: 87,
+  series: 'f1',
+  season: 2026,
+  team: 'Haas',
+  car_model: 'Haas VF-26',
+  class: 'F1',
+  drivers: ['Oliver Bearman'],
+},
 
-  {
-    number: 69,
-    series: 'wrc',
-    season: 2026,
-    team: 'Toyota Gazoo Racing',
-    car_model: 'Toyota GR Yaris Rally1',
-    class: 'WRC',
-    drivers: ['Sami Pajari', 'Marko Salminen'],
-  },
+// Audi
+{
+  number: 27,
+  series: 'f1',
+  season: 2026,
+  team: 'Audi',
+  car_model: 'Audi R26',
+  class: 'F1',
+  drivers: ['Nico Hülkenberg'],
+},
+{
+  number: 5,
+  series: 'f1',
+  season: 2026,
+  team: 'Audi',
+  car_model: 'Audi R26',
+  class: 'F1',
+  drivers: ['Gabriel Bortoleto'],
+},
+
+// Alpine
+{
+  number: 10,
+  series: 'f1',
+  season: 2026,
+  team: 'Alpine',
+  car_model: 'Alpine A526',
+  class: 'F1',
+  drivers: ['Pierre Gasly'],
+},
+{
+  number: 43,
+  series: 'f1',
+  season: 2026,
+  team: 'Alpine',
+  car_model: 'Alpine A526',
+  class: 'F1',
+  drivers: ['Franco Colapinto'],
+},
+
+// Cadillac
+{
+  number: 11,
+  series: 'f1',
+  season: 2026,
+  team: 'Cadillac',
+  car_model: 'Cadillac MAC-26',
+  class: 'F1',
+  drivers: ['Sergio Pérez'],
+},
+{
+  number: 77,
+  series: 'f1',
+  season: 2026,
+  team: 'Cadillac',
+  car_model: 'Cadillac MAC-26',
+  class: 'F1',
+  drivers: ['Valtteri Bottas'],
+},
+
+// ── WRC ──────────────────────────────────────────────────────────────────
+
+// Toyota Gazoo Racing WRT — full-season crews
+{
+  number: 33,
+  series: 'wrc',
+  season: 2026,
+  team: 'Toyota Gazoo Racing WRT',
+  car_model: 'Toyota GR Yaris Rally1',
+  class: 'WRC',
+  drivers: ['Elfyn Evans', 'Scott Martin'],
+},
+{
+  number: 99,
+  series: 'wrc',
+  season: 2026,
+  team: 'Toyota Gazoo Racing WRT',
+  car_model: 'Toyota GR Yaris Rally1',
+  class: 'WRC',
+  drivers: ['Oliver Solberg', 'Elliott Edmondson'],
+},
+{
+  number: 18,
+  series: 'wrc',
+  season: 2026,
+  team: 'Toyota Gazoo Racing WRT',
+  car_model: 'Toyota GR Yaris Rally1',
+  class: 'WRC',
+  drivers: ['Takamoto Katsuta', 'Aaron Johnston'],
+},
+
+// Toyota Gazoo Racing WRT — part-time (10 rounds)
+{
+  number: 1,
+  series: 'wrc',
+  season: 2026,
+  team: 'Toyota Gazoo Racing WRT',
+  car_model: 'Toyota GR Yaris Rally1',
+  class: 'WRC',
+  drivers: ['Sébastien Ogier', 'Vincent Landais'],
+},
+
+// Toyota Gazoo Racing WRT2
+{
+  number: 5,
+  series: 'wrc',
+  season: 2026,
+  team: 'Toyota Gazoo Racing WRT2',
+  car_model: 'Toyota GR Yaris Rally1',
+  class: 'WRC',
+  drivers: ['Sami Pajari', 'Marko Salminen'],
+},
+
+// Hyundai Shell Mobis WRT — full-season crews
+{
+  number: 11,
+  series: 'wrc',
+  season: 2026,
+  team: 'Hyundai Shell Mobis WRT',
+  car_model: 'Hyundai i20 N Rally1',
+  class: 'WRC',
+  drivers: ['Thierry Neuville', 'Martijn Wydaeghe'],
+},
+{
+  number: 16,
+  series: 'wrc',
+  season: 2026,
+  team: 'Hyundai Shell Mobis WRT',
+  car_model: 'Hyundai i20 N Rally1',
+  class: 'WRC',
+  drivers: ['Adrien Fourmaux', 'Alexandre Coria'],
+},
+
+// Hyundai Shell Mobis WRT — part-time / rotating third car
+// (Esapekka Lappi, Dani Sordo, Hayden Paddon share this seat by round)
+// Hyundai Shell Mobis WRT — part-time rotating third car
+// Numbers vary by event; these are their observed/typical numbers
+{
+  number: 69,  // Paddon's number at Monte Carlo
+  series: 'wrc',
+  season: 2026,
+  team: 'Hyundai Shell Mobis WRT',
+  car_model: 'Hyundai i20 N Rally1',
+  class: 'WRC',
+  drivers: ['Hayden Paddon', 'John Kennard'],
+},
+{
+  number: 8,   // Lappi's number at Sweden/Kenya — verify per rally
+  series: 'wrc',
+  season: 2026,
+  team: 'Hyundai Shell Mobis WRT',
+  car_model: 'Hyundai i20 N Rally1',
+  class: 'WRC',
+  drivers: ['Esapekka Lappi', 'Enni Mälkönen'],
+},
+{
+  number: 19,  // Sordo's number — verify per rally
+  series: 'wrc',
+  season: 2026,
+  team: 'Hyundai Shell Mobis WRT',
+  car_model: 'Hyundai i20 N Rally1',
+  class: 'WRC',
+  drivers: ['Dani Sordo', 'Cándido Carrera'],
+},
+
+// M-Sport Ford WRT — partial program
+{
+  number: 4,   // Sesks' observed number — verify per rally
+  series: 'wrc',
+  season: 2026,
+  team: 'M-Sport Ford WRT',
+  car_model: 'Ford Puma Rally1',
+  class: 'WRC',
+  drivers: ['Mārtiņš Sesks', 'Renārs Francis'],
+},
+
+// M-Sport Ford WRT — full-season crews
+{
+  number: 42,
+  series: 'wrc',
+  season: 2026,
+  team: 'M-Sport Ford WRT',
+  car_model: 'Ford Puma Rally1',
+  class: 'WRC',
+  drivers: ['Josh McErlean', 'Eoin Treacy'],
+},
+{
+  number: 44,
+  series: 'wrc',
+  season: 2026,
+  team: 'M-Sport Ford WRT',
+  car_model: 'Ford Puma Rally1',
+  class: 'WRC',
+  drivers: ['Jon Armstrong', 'Shane Byrne'],
+},
 
 ];
 

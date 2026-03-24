@@ -121,9 +121,9 @@ export const raceResults = {
       {
         className: 'WRC',
         podium: [
-          { position: 1, carNumber: 12 },
+          { position: 1, carNumber: 99 },
           { position: 2, carNumber: 33 },
-          { position: 3, carNumber: 17 },
+          { position: 3, carNumber: 1 },
         ],
       },
     ],
@@ -135,8 +135,8 @@ export const raceResults = {
         className: 'WRC',
         podium: [
           { position: 1, carNumber: 18 },
-          { position: 2, carNumber: 11 },
-          { position: 3, carNumber: 69 },
+          { position: 2, carNumber: 16 },
+          { position: 3, carNumber: 5 },
         ],
       },
     ],
@@ -149,7 +149,7 @@ export const raceResults = {
         podium: [
           { position: 1, carNumber: 33 },
           { position: 2, carNumber: 18 },
-          { position: 3, carNumber: 69 },
+          { position: 3, carNumber: 5 },
         ],
       },
     ],
