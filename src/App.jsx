@@ -369,6 +369,11 @@ function App() {
                             <span className="podium-team">
                               {team ? team.team : 'Unknown'}
                             </span>
+                            {team?.car_model && (
+                              <span className="podium-car">
+                                {team.car_model}
+                              </span>
+                            )}
                           </div>
                         </div>
                       );

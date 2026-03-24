@@ -786,6 +786,10 @@ body {
   font-size: 0.75rem;
   color: var(--text-tertiary);
 }
+.podium-car {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
 
 /* Footer */
 .footer {
