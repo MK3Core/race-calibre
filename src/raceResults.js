@@ -21,23 +21,23 @@ export const raceResults = {
         podium: [
           { position: 1, carNumber: 7 },
           { position: 2, carNumber: 31 },
-          { position: 3, carNumber: 25 },
+          { position: 3, carNumber: 24 },
         ],
       },
       {
         className: 'LMP2',
         podium: [
-          { position: 1, carNumber: 10 },
-          { position: 2, carNumber: 47 },
-          { position: 3, carNumber: 34 },
+          { position: 1, carNumber: 904 },
+          { position: 2, carNumber: 43 },
+          { position: 3, carNumber: 343 },
         ],
       },
       {
         className: 'GTD Pro',
         podium: [
-          { position: 1, carNumber: 9 },
+          { position: 1, carNumber: 1 },
           { position: 2, carNumber: 75 },
-          { position: 3, carNumber: 58 },
+          { position: 3, carNumber: 48 },
         ],
       },
       {
@@ -64,7 +64,7 @@ export const raceResults = {
       {
         className: 'LMP2',
         podium: [
-          { position: 1, carNumber: 23 },
+          { position: 1, carNumber: 2 },
           { position: 2, carNumber: 22 },
           { position: 3, carNumber: 8 },
         ],
@@ -72,9 +72,9 @@ export const raceResults = {
       {
         className: 'GTD Pro',
         podium: [
-          { position: 1, carNumber: 33 },
-          { position: 2, carNumber: 29 },
-          { position: 3, carNumber: 3 },
+          { position: 1, carNumber: 911 },
+          { position: 2, carNumber: 77 },
+          { position: 3, carNumber: 4 },
         ],
       },
       {
@@ -82,7 +82,7 @@ export const raceResults = {
         podium: [
           { position: 1, carNumber: 21 },
           { position: 2, carNumber: 27 },
-          { position: 3, carNumber: 16 },
+          { position: 3, carNumber: 120 },
         ],
       },
     ],
