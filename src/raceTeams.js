@@ -1,25 +1,3 @@
-// raceTeams.js — car/team/driver roster for all tracked series
-//
-// Source of truth for car metadata: number, team, car model, class, and driver lineups.
-//
-// Primary lookup key: (number, series, season)
-//   - number  : car number (integer); for F1 the driver's permanent race number;
-//               for WRC the driver's official entry number for the season
-//   - series  : must exactly match a series id from raceData.js ('f1', 'imsa', 'wec', 'wrc')
-//   - season  : 4-digit year (integer)
-//
-// Driver overrides (driverOverrides):
-//   An optional array of objects for race-specific or mid-season driver changes.
-//   Each override has:
-//     race     : race name matching raceData.js exactly — applies to that race only
-//     drivers  : full driver array to use for that race (replaces base drivers entirely)
-//     note     : human-readable explanation (required)
-//   For a mid-season change that persists, list all affected race names as separate
-//   override objects, or handle the range in the consuming UI using race schedule order.
-//
-// All driver names match raceResults.js exactly. Car numbers for IMSA are marked
-// where they need verification against the official 2026 IMSA entry list.
-
 export const raceTeams = [
 
   // ── IMSA ─────────────────────────────────────────────────────────────────
@@ -32,14 +10,10 @@ export const raceTeams = [
     team: 'Porsche Penske Motorsport',
     car_model: 'Porsche 963',
     class: 'GTP',
-    // Note: raceResults.js uses 'Felipe Nasr' at Daytona and 'Luiz Felipe Nasr' at Sebring
-    // for the same driver. 'Luiz Felipe Nasr' is used as the canonical spelling here.
     drivers: ['Luiz Felipe Nasr', 'Julien Andlauer', 'Laurin Heinrich'],
     driverOverrides: [
       {
         race: 'Rolex 24 at Daytona',
-        // raceResults.js spells this driver 'Felipe Nasr' at Daytona — preserved as-is
-        // to match the results entry for that race
         drivers: ['Felipe Nasr', 'Julien Andlauer', 'Laurin Heinrich'],
         note: 'Daytona results use short form "Felipe Nasr"; lineup otherwise unchanged',
       },
@@ -47,7 +21,7 @@ export const raceTeams = [
   },
 
   {
-    number: 6, // verify against 2026 IMSA entry list
+    number: 6,
     series: 'imsa',
     season: 2026,
     team: 'Porsche Penske Motorsport',
@@ -57,12 +31,9 @@ export const raceTeams = [
   },
 
   {
-    number: 31, // verify against 2026 IMSA entry list
+    number: 31,
     series: 'imsa',
     season: 2026,
-    // Note: raceResults.js lists this car as 'Cadillac Whelen' at Daytona and
-    // 'Action Express Racing' at Sebring with overlapping drivers. Treated as one
-    // entry; 'Action Express Racing' used as canonical team name.
     team: 'Action Express Racing',
     car_model: 'Cadillac V-Series.R',
     class: 'GTP',
@@ -77,14 +48,12 @@ export const raceTeams = [
   },
 
   {
-    number: 25, // verify against 2026 IMSA entry list
+    number: 25,
     series: 'imsa',
     season: 2026,
     team: 'BMW M Team WRT',
     car_model: 'BMW M Hybrid V8',
     class: 'GTP',
-    // Only appears in Daytona results with 4 drivers; core 2-driver season lineup
-    // should be verified — likely Sheldon van der Linde and Dries Vanthoor.
     drivers: ['Sheldon van der Linde', 'Dries Vanthoor', 'Robin Frijns', 'René Rast'],
     driverOverrides: [
       {
@@ -97,13 +66,12 @@ export const raceTeams = [
 
   // LMP2 class
   {
-    number: 10, // verify against 2026 IMSA entry list
+    number: 10,
     series: 'imsa',
     season: 2026,
     team: 'CrowdStrike Racing by APR',
     car_model: 'ORECA 07',
     class: 'LMP2',
-    // 4-driver Daytona entry; core season lineup should be verified
     drivers: ['George Kurtz', 'Alex Quinn', 'Toby Sowery', 'Malthe Jakobsen'],
     driverOverrides: [
       {
@@ -115,13 +83,12 @@ export const raceTeams = [
   },
 
   {
-    number: 47, // verify against 2026 IMSA entry list
+    number: 47,
     series: 'imsa',
     season: 2026,
     team: 'Inter Europol Competition',
     car_model: 'ORECA 07',
     class: 'LMP2',
-    // 4-driver Daytona entry; core season lineup should be verified
     drivers: ['Tom Dillmann', 'Bijoy Garg', 'Antonio Félix da Costa', 'Jeremy Clarke'],
     driverOverrides: [
       {
@@ -133,13 +100,12 @@ export const raceTeams = [
   },
 
   {
-    number: 34, // verify against 2026 IMSA entry list
+    number: 34,
     series: 'imsa',
     season: 2026,
     team: 'Inter Europol Competition',
     car_model: 'ORECA 07',
     class: 'LMP2',
-    // 4-driver Daytona entry; core season lineup should be verified
     drivers: ['Jakub Smiechowski', 'George Kolovos', 'Nolan Siegel', 'Nick Cassidy'],
     driverOverrides: [
       {
@@ -151,7 +117,7 @@ export const raceTeams = [
   },
 
   {
-    number: 22, // verify against 2026 IMSA entry list
+    number: 22,
     series: 'imsa',
     season: 2026,
     team: 'United Autosports',
@@ -161,7 +127,7 @@ export const raceTeams = [
   },
 
   {
-    number: 23, // verify against 2026 IMSA entry list
+    number: 23,
     series: 'imsa',
     season: 2026,
     team: 'United Autosports',
@@ -171,7 +137,7 @@ export const raceTeams = [
   },
 
   {
-    number: 8, // verify against 2026 IMSA entry list
+    number: 8,
     series: 'imsa',
     season: 2026,
     team: 'Tower Motorsports',
@@ -182,13 +148,12 @@ export const raceTeams = [
 
   // GTD Pro class
   {
-    number: 1, // verify against 2026 IMSA entry list
+    number: 1,
     series: 'imsa',
     season: 2026,
     team: 'Paul Miller Racing',
     car_model: 'BMW M4 GT3',
     class: 'GTD Pro',
-    // 4-driver Daytona entry; core season lineup should be verified
     drivers: ['Neil Verhagen', 'Connor De Phillippi', 'Max Hesse', 'Dan Harper'],
     driverOverrides: [
       {
@@ -200,13 +165,12 @@ export const raceTeams = [
   },
 
   {
-    number: 75, // verify against 2026 IMSA entry list
+    number: 75,
     series: 'imsa',
     season: 2026,
     team: '75 Express',
     car_model: 'Mercedes-AMG GT3',
     class: 'GTD Pro',
-    // 4-driver Daytona entry; core season lineup should be verified
     drivers: ['Kenny Habul', 'Maro Engel', 'Chaz Mostert', 'Will Power'],
     driverOverrides: [
       {
@@ -218,13 +182,12 @@ export const raceTeams = [
   },
 
   {
-    number: 58, // verify against 2026 IMSA entry list
+    number: 58,
     series: 'imsa',
     season: 2026,
     team: 'Winward Racing',
     car_model: 'Mercedes-AMG GT3',
     class: 'GTD Pro',
-    // 4-driver Daytona entry; core season lineup should be verified
     drivers: ['Scott Noble', 'Jason Hart', 'Maxime Martin', 'Luca Stolz'],
     driverOverrides: [
       {
@@ -236,7 +199,7 @@ export const raceTeams = [
   },
 
   {
-    number: 33, // verify against 2026 IMSA entry list
+    number: 33,
     series: 'imsa',
     season: 2026,
     team: 'Manthey EMA',
@@ -246,7 +209,7 @@ export const raceTeams = [
   },
 
   {
-    number: 29, // verify against 2026 IMSA entry list
+    number: 29,
     series: 'imsa',
     season: 2026,
     team: 'AO Racing',
@@ -256,7 +219,7 @@ export const raceTeams = [
   },
 
   {
-    number: 3, // verify against 2026 IMSA entry list
+    number: 3,
     series: 'imsa',
     season: 2026,
     team: 'Pratt Miller Motorsports',
@@ -267,13 +230,12 @@ export const raceTeams = [
 
   // GTD class
   {
-    number: 57, // verify against 2026 IMSA entry list
+    number: 57,
     series: 'imsa',
     season: 2026,
     team: 'Winward Racing',
     car_model: 'Mercedes-AMG GT3',
     class: 'GTD',
-    // 4-driver Daytona entry; core season lineup should be verified
     drivers: ['Russell Ward', 'Philip Ellis', 'Indy Dontje', 'Lucas Auer'],
     driverOverrides: [
       {
@@ -285,13 +247,12 @@ export const raceTeams = [
   },
 
   {
-    number: 44, // verify against 2026 IMSA entry list
+    number: 44,
     series: 'imsa',
     season: 2026,
     team: 'Magnus Racing',
     car_model: 'Porsche 911 GT3 R',
     class: 'GTD',
-    // 4-driver Daytona entry; core season lineup should be verified
     drivers: ['John Potter', 'Spencer Pumpelly', 'Nicki Thiim', 'Madison Snow'],
     driverOverrides: [
       {
@@ -303,7 +264,7 @@ export const raceTeams = [
   },
 
   {
-    number: 27, // verify against 2026 IMSA entry list
+    number: 27,
     series: 'imsa',
     season: 2026,
     team: 'Heart of Racing',
@@ -320,7 +281,7 @@ export const raceTeams = [
   },
 
   {
-    number: 21, // verify against 2026 IMSA entry list
+    number: 21,
     series: 'imsa',
     season: 2026,
     team: 'AF Corse',
@@ -330,7 +291,7 @@ export const raceTeams = [
   },
 
   {
-    number: 16, // verify against 2026 IMSA entry list
+    number: 16,
     series: 'imsa',
     season: 2026,
     team: 'Wright Motorsports',
@@ -340,15 +301,12 @@ export const raceTeams = [
   },
 
   // ── F1 ───────────────────────────────────────────────────────────────────
-  // Each F1 entry is a single driver using their permanent race number.
-  // car_model uses the 2026 chassis designation — verify once officially announced.
-
   {
     number: 63,
     series: 'f1',
     season: 2026,
     team: 'Mercedes',
-    car_model: 'Mercedes W17', // 2026 chassis designation — verify
+    car_model: 'Mercedes W17',
     class: 'F1',
     drivers: ['George Russell'],
   },
@@ -358,7 +316,7 @@ export const raceTeams = [
     series: 'f1',
     season: 2026,
     team: 'Mercedes',
-    car_model: 'Mercedes W17', // 2026 chassis designation — verify
+    car_model: 'Mercedes W17',
     class: 'F1',
     drivers: ['Kimi Antonelli'],
   },
@@ -368,7 +326,7 @@ export const raceTeams = [
     series: 'f1',
     season: 2026,
     team: 'Ferrari',
-    car_model: 'Ferrari SF-26', // 2026 chassis designation — verify
+    car_model: 'Ferrari SF-26',
     class: 'F1',
     drivers: ['Charles Leclerc'],
   },
@@ -378,17 +336,14 @@ export const raceTeams = [
     series: 'f1',
     season: 2026,
     team: 'Ferrari',
-    car_model: 'Ferrari SF-26', // 2026 chassis designation — verify
+    car_model: 'Ferrari SF-26',
     class: 'F1',
     drivers: ['Lewis Hamilton'],
   },
 
   // ── WRC ──────────────────────────────────────────────────────────────────
-  // drivers is always [driver, codriver].
-  // Entry numbers should be verified against the official 2026 WRC entry list.
-
   {
-    number: 12, // verify against 2026 WRC entry list
+    number: 12,
     series: 'wrc',
     season: 2026,
     team: 'Toyota Gazoo Racing',
@@ -398,7 +353,7 @@ export const raceTeams = [
   },
 
   {
-    number: 33, // verify against 2026 WRC entry list
+    number: 33,
     series: 'wrc',
     season: 2026,
     team: 'Toyota Gazoo Racing',
@@ -408,7 +363,7 @@ export const raceTeams = [
   },
 
   {
-    number: 17, // verify against 2026 WRC entry list
+    number: 17,
     series: 'wrc',
     season: 2026,
     team: 'Toyota Gazoo Racing',
@@ -418,7 +373,7 @@ export const raceTeams = [
   },
 
   {
-    number: 18, // verify against 2026 WRC entry list
+    number: 18,
     series: 'wrc',
     season: 2026,
     team: 'Toyota Gazoo Racing',
@@ -428,7 +383,7 @@ export const raceTeams = [
   },
 
   {
-    number: 11, // verify against 2026 WRC entry list
+    number: 11,
     series: 'wrc',
     season: 2026,
     team: 'Hyundai Shell Mobil 1',
@@ -438,7 +393,7 @@ export const raceTeams = [
   },
 
   {
-    number: 69, // verify against 2026 WRC entry list
+    number: 69,
     series: 'wrc',
     season: 2026,
     team: 'Toyota Gazoo Racing',
@@ -449,20 +404,6 @@ export const raceTeams = [
 
 ];
 
-// ── Helper ────────────────────────────────────────────────────────────────
-
-/**
- * Look up a single car entry by its primary key (number, series, season).
- *
- * @param {number} number  - Car number (integer)
- * @param {string} series  - Series id ('f1', 'imsa', 'wec', 'wrc')
- * @param {number} season  - Season year (e.g. 2026)
- * @param {string|null} raceName - Optional race name (must match raceData.js exactly).
- *   When provided, driver overrides for that specific race are applied, returning a
- *   shallow copy of the entry with the race-specific drivers array substituted.
- *   If no override exists for the race, the base entry is returned unchanged.
- * @returns {object|null} The matching car entry, or null if not found.
- */
 export function getCarByNumber(number, series, season, raceName = null) {
   const entry = raceTeams.find(
     car => car.number === number && car.series === series && car.season === season
