@@ -63,7 +63,7 @@ export const racingSeries = {
     calUrl: 'https://www.fiawec.com/en/',
     races: [
       { name: '1812km of Qatar', location: 'Lusail', dateTimeUTC: '2026-03-28T13:00:00Z', timezone: 'Asia/Qatar' },
-      { name: '6 Hours of Imola', location: 'Imola', dateTimeUTC: '2026-04-19T11:00:00Z', endDateTimeUTC: '2026-04-19T17:00:00Z', timezone: 'Europe/Rome' }, // 6hr race
+      { name: '6 Hours of Imola', location: 'Imola', dateTimeUTC: '2026-04-19T11:00:00Z', endDateTimeUTC: '2026-04-19T17:00:00Z', timezone: 'Europe/Rome', cancelled: true }, // 6hr race
       { name: '6 Hours of Spa-Francorchamps', location: 'Spa', dateTimeUTC: '2026-05-09T11:00:00Z', endDateTimeUTC: '2026-05-09T17:00:00Z', timezone: 'Europe/Brussels' }, // 6hr race
       { name: '24 Hours of Le Mans', location: 'Le Mans', dateTimeUTC: '2026-06-13T14:00:00Z', endDateTimeUTC: '2026-06-14T14:00:00Z', timezone: 'Europe/Paris' }, // 24hr race
       { name: '6 Hours of São Paulo', location: 'São Paulo', dateTimeUTC: '2026-07-12T15:00:00Z', endDateTimeUTC: '2026-07-12T21:00:00Z', timezone: 'America/Sao_Paulo' }, // 6hr race
