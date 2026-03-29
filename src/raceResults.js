@@ -115,6 +115,19 @@ export const raceResults = {
     ],
   },
 
+  'f1::Japanese Grand Prix': {
+    classes: [
+      {
+        className: 'F1',
+        podium: [
+          { position: 1, carNumber: 12 },
+          { position: 2, carNumber: 81 },
+          { position: 3, carNumber: 16 },
+        ],
+      },
+    ],
+  },
+
   // ── WRC ──────────────────────────────────────────────────────────────────
   'wrc::Rally Monte-Carlo': {
     classes: [
