@@ -168,4 +168,17 @@ export const raceResults = {
     ],
   },
 
+  'wrc::Rally Croatia': {
+    classes: [
+      {
+        className: 'WRC',
+        podium: [
+          { position: 1, carNumber: 18 },
+          { position: 2, carNumber: 5 },
+          { position: 3, carNumber: 20 },
+        ],
+      },
+    ],
+  },
+
 };
