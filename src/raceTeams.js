@@ -1110,6 +1110,15 @@ export const raceTeams = [
   drivers: ['Hayden Paddon', 'John Kennard'],
 },
 {
+  number: 20,  // Paddon's number at Croatia
+  series: 'wrc',
+  season: 2026,
+  team: 'Hyundai Shell Mobis WRT',
+  car_model: 'Hyundai i20 N Rally1',
+  class: 'WRC',
+  drivers: ['Hayden Paddon', 'John Kennard'],
+},
+{
   number: 8,   // Lappi's number at Sweden/Kenya — verify per rally
   series: 'wrc',
   season: 2026,
