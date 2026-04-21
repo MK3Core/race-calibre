@@ -88,6 +88,27 @@ export const raceResults = {
     ],
   },
 
+  'imsa::Grand Prix of Long Beach': {
+    classes: [
+      {
+        className: 'GTP',
+        podium: [
+          { position: 1, carNumber: 93 },
+          { position: 2, carNumber: 31 },
+          { position: 3, carNumber: 6 },
+        ],
+      },
+      {
+        className: 'GTD',
+        podium: [
+          { position: 1, carNumber: 12 },
+          { position: 2, carNumber: 96 },
+          { position: 3, carNumber: 34 },
+        ],
+      },
+    ],
+  },
+
   // ── F1 ───────────────────────────────────────────────────────────────────
   'f1::Australian Grand Prix': {
     classes: [
@@ -181,4 +202,25 @@ export const raceResults = {
     ],
   },
 
+  // ── WEC ──────────────────────────────────────────────────────────────────
+  'wec::6 Hours of Imola': {
+    classes: [
+      {
+        className: 'Hypercar',
+        podium: [
+          { position: 1, carNumber: 8 },
+          { position: 2, carNumber: 51 },
+          { position: 3, carNumber: 7 },
+        ],
+      },
+      {
+        className: 'LMGT3',
+        podium: [
+          { position: 1, carNumber: 69 },
+          { position: 2, carNumber: 33 },
+          { position: 3, carNumber: 92 },
+        ],
+      },
+    ],
+  },
 };
