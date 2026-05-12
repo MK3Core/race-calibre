@@ -786,7 +786,13 @@ export const raceTeams = [
     team: 'JDC-Miller MotorSports',
     car_model: 'Porsche 963',
     class: 'GTP',
-    drivers: ['Tijmen van der Helm', 'Nico Pino', 'Kaylen Frederick'],
+    drivers: ['Tijmen van der Helm', 'Laurin Heinrich'],
+    driverOverrides: [
+      {
+        race: 'Rolex 24 at Daytona',
+        drivers: ['Tijmen van der Helm', 'Laurin Heinrich', 'Nico Pino', 'Kaylen Frederick'],
+      },
+    ],
   },
   {
     number: 2,
