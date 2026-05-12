@@ -109,6 +109,36 @@ export const raceResults = {
     ],
   },
 
+  'imsa::WeatherTech Raceway Laguna Seca': {
+
+    classes: [
+      {
+        className: 'GTP',
+        podium: [
+          { position: 1, carNumber: 5 },
+          { position: 2, carNumber: 31 },
+          { position: 3, carNumber: 25 },
+        ],
+      },
+      {
+        className: 'GTD Pro',
+        podium: [
+          { position: 1, carNumber: 65 },
+          { position: 2, carNumber: 4 },
+          { position: 3, carNumber: 77 },
+        ],
+      },
+      {
+        className: 'GTD',
+        podium: [
+          { position: 1, carNumber: 45 },
+          { position: 2, carNumber: 27 },
+          { position: 3, carNumber: 70 },
+        ],
+      },
+    ],
+  },
+
   // ── F1 ───────────────────────────────────────────────────────────────────
   'f1::Australian Grand Prix': {
     classes: [
@@ -144,6 +174,18 @@ export const raceResults = {
           { position: 1, carNumber: 12 },
           { position: 2, carNumber: 81 },
           { position: 3, carNumber: 16 },
+        ],
+      },
+    ],
+  },
+  'f1::Miami Grand Prix': {
+    classes: [
+      {
+        className: 'F1',
+        podium: [
+          { position: 1, carNumber: 12 },
+          { position: 2, carNumber: 1 },
+          { position: 3, carNumber: 81 },
         ],
       },
     ],
@@ -202,8 +244,55 @@ export const raceResults = {
     ],
   },
 
+  'wrc::Rally Islas Canarias': {
+    classes: [
+      {
+        className: 'WRC',
+        podium: [
+          { position: 1, carNumber: 1 },
+          { position: 2, carNumber: 33 },
+          { position: 3, carNumber: 5 },
+        ],
+      },
+    ],
+  },
+
+  'wrc::Rally Portugal': {
+    classes: [
+      {
+        className: 'WRC',
+        podium: [
+          { position: 1, carNumber: 11 },
+          { position: 2, carNumber: 99 },
+          { position: 3, carNumber: 33 },
+        ],
+      },
+    ],
+  },
+
   // ── WEC ──────────────────────────────────────────────────────────────────
   'wec::6 Hours of Imola': {
+    classes: [
+      {
+        className: 'Hypercar',
+        podium: [
+          { position: 1, carNumber: 8 },
+          { position: 2, carNumber: 51 },
+          { position: 3, carNumber: 7 },
+        ],
+      },
+      {
+        className: 'LMGT3',
+        podium: [
+          { position: 1, carNumber: 69 },
+          { position: 2, carNumber: 33 },
+          { position: 3, carNumber: 92 },
+        ],
+      },
+    ],
+  },
+
+  'wec::6 Hours of Spa-Francorchamps': {
     classes: [
       {
         className: 'Hypercar',
