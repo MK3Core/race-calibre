@@ -780,7 +780,7 @@ export const raceTeams = [
     ],
   },
   {
-    number: 85,
+    number: 5,
     series: 'imsa',
     season: 2026,
     team: 'JDC-Miller MotorSports',
