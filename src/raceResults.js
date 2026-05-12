@@ -297,16 +297,16 @@ export const raceResults = {
       {
         className: 'Hypercar',
         podium: [
-          { position: 1, carNumber: 8 },
-          { position: 2, carNumber: 51 },
-          { position: 3, carNumber: 7 },
+          { position: 1, carNumber: 20 },
+          { position: 2, carNumber: 15 },
+          { position: 3, carNumber: 50 },
         ],
       },
       {
         className: 'LMGT3',
         podium: [
-          { position: 1, carNumber: 69 },
-          { position: 2, carNumber: 33 },
+          { position: 1, carNumber: 10 },
+          { position: 2, carNumber: 27 },
           { position: 3, carNumber: 92 },
         ],
       },
