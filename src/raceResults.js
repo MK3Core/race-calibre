@@ -109,6 +109,27 @@ export const raceResults = {
     ],
   },
 
+  'imsa::Detroit Grand Prix': {
+    classes: [
+      {
+        className: 'GTP',
+        podium: [
+          { position: 1, carNumber: 31 },
+          { position: 2, carNumber: 25 },
+          { position: 3, carNumber: 10 },
+        ],
+      },
+      {
+        className: 'GTD Pro',
+        podium: [
+          { position: 1, carNumber: 3 },
+          { position: 2, carNumber: 9 },
+          { position: 3, carNumber: 65 },
+        ],
+      },
+    ],
+  },
+
   'imsa::WeatherTech Raceway Laguna Seca': {
 
     classes: [
@@ -191,6 +212,19 @@ export const raceResults = {
     ],
   },
 
+  'f1::Canadian Grand Prix': {
+    classes: [
+      {
+        className: 'F1',
+        podium: [
+          { position: 1, carNumber: 12 },
+          { position: 2, carNumber: 44 },
+          { position: 3, carNumber: 3 },
+        ],
+      },
+    ],
+  },
+
   // ── WRC ──────────────────────────────────────────────────────────────────
   'wrc::Rally Monte-Carlo': {
     classes: [
@@ -265,6 +299,19 @@ export const raceResults = {
           { position: 1, carNumber: 11 },
           { position: 2, carNumber: 99 },
           { position: 3, carNumber: 33 },
+        ],
+      },
+    ],
+  },
+
+  'wrc::Rally Japan': {
+    classes: [
+      {
+        className: 'WRC',
+        podium: [
+          { position: 1, carNumber: 33 },
+          { position: 2, carNumber: 1 },
+          { position: 3, carNumber: 5 },
         ],
       },
     ],
