@@ -225,6 +225,19 @@ export const raceResults = {
     ],
   },
 
+  'f1::Monaco Grand Prix': {
+    classes: [
+      {
+        className: 'F1',
+        podium: [
+          { position: 1, carNumber: 12 },
+          { position: 2, carNumber: 44 },
+          { position: 3, carNumber: 6 },
+        ],
+      },
+    ],
+  },
+
   // ── WRC ──────────────────────────────────────────────────────────────────
   'wrc::Rally Monte-Carlo': {
     classes: [
