@@ -238,6 +238,19 @@ export const raceResults = {
     ],
   },
 
+  'f1::Austrian Grand Prix': {
+    classes: [
+      {
+        className: 'F1',
+        podium: [
+          { position: 1, carNumber: 63 },
+          { position: 2, carNumber: 3 },
+          { position: 3, carNumber: 12 },
+        ],
+      },
+    ],
+  },
+
   // ── WRC ──────────────────────────────────────────────────────────────────
   'wrc::Rally Monte-Carlo': {
     classes: [
@@ -325,6 +338,19 @@ export const raceResults = {
           { position: 1, carNumber: 33 },
           { position: 2, carNumber: 1 },
           { position: 3, carNumber: 5 },
+        ],
+      },
+    ],
+  },
+
+  'wrc::Rally Greece Acropolis': {
+    classes: [
+      {
+        className: 'WRC',
+        podium: [
+          { position: 1, carNumber: 1 },
+          { position: 2, carNumber: 11 },
+          { position: 3, carNumber: 18 },
         ],
       },
     ],
