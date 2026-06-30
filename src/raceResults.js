@@ -130,6 +130,43 @@ export const raceResults = {
     ],
   },
 
+  'imsa::Watkins Glen': {
+    classes: [
+      {
+        className: 'GTP',
+        podium: [
+          { position: 1, carNumber: 31 },
+          { position: 2, carNumber: 93 },
+          { position: 3, carNumber: 5 },
+        ],
+      },
+      {
+        className: 'LMP2',
+        podium: [
+          { position: 1, carNumber: 99 },
+          { position: 2, carNumber: 904 },
+          { position: 3, carNumber: 18 },
+        ],
+      },
+      {
+        className: 'GTD Pro',
+        podium: [
+          { position: 1, carNumber: 14 },
+          { position: 2, carNumber: 1 },
+          { position: 3, carNumber: 64 },
+        ],
+      },
+      {
+        className: 'GTD',
+        podium: [
+          { position: 1, carNumber: 912 },
+          { position: 2, carNumber: 120 },
+          { position: 3, carNumber: 68 },
+        ],
+      },
+    ],
+  },
+
   'imsa::WeatherTech Raceway Laguna Seca': {
 
     classes: [

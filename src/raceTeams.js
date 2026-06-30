@@ -1314,6 +1314,15 @@ export const raceTeams = [
     ],
   },
   {
+    number: 68,
+    series: 'imsa',
+    season: 2026,
+    team: 'Car Blanche',
+    car_model: 'Aston Martin Vantage GT3 #068',
+    class: 'GTD',
+    drivers: ['Valentin Hasse-Clot', 'Marius Fossard', 'Trenton Estep'],
+  },
+  {
     number: 70,
     series: 'imsa',
     season: 2026,
