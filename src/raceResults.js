@@ -275,6 +275,19 @@ export const raceResults = {
     ],
   },
 
+  'f1::Spanish Grand Prix': {
+    classes: [
+      {
+        className: 'F1',
+        podium: [
+          { position: 1, carNumber: 44 },
+          { position: 2, carNumber: 63 },
+          { position: 3, carNumber: 1 },
+        ],
+      },
+    ],
+  },
+
   'f1::Austrian Grand Prix': {
     classes: [
       {
@@ -431,6 +444,27 @@ export const raceResults = {
           { position: 1, carNumber: 10 },
           { position: 2, carNumber: 27 },
           { position: 3, carNumber: 92 },
+        ],
+      },
+    ],
+  },
+
+  'wec::24 Hours of Le Mans': {
+    classes: [
+      {
+        className: 'Hypercar',
+        podium: [
+          { position: 1, carNumber: 7 },
+          { position: 2, carNumber: 20 },
+          { position: 3, carNumber: 8 },
+        ],
+      },
+      {
+        className: 'LMGT3',
+        podium: [
+          { position: 1, carNumber: 33 },
+          { position: 2, carNumber: 78 },
+          { position: 3, carNumber: 23 },
         ],
       },
     ],
