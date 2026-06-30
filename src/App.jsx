@@ -293,7 +293,7 @@ function App() {
                     {race.cancelled ? (
                       <div className="race-cancelled">Race Cancelled</div>
                     ) : racePast ? (() => {
-                      const result = raceResults[`${race.seriesId}::${race.name}`];
+                      const result = null; // raceResults[`${race.seriesId}::${race.name}`];
                       return result ? (
                         <button
                           className="results-button"
