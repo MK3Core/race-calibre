@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { racingSeries, getRacesBySeries, LAST_UPDATED } from './raceData';
 import { raceResults } from './raceResults';
 import { getCarByNumber } from './raceTeams';
@@ -12,25 +12,6 @@ function App() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [resultModal, setResultModal] = useState(null); // { race, result }
   const [linkCopied, setLinkCopied] = useState(false);
-  const [calendarMenuOpen, setCalendarMenuOpen] = useState(false);
-  const calendarMenuRef = useRef(null);
-
-  // Close the calendar menu on outside click or Escape
-  useEffect(() => {
-    if (!calendarMenuOpen) return;
-    const handleClick = (e) => {
-      if (!calendarMenuRef.current?.contains(e.target)) setCalendarMenuOpen(false);
-    };
-    const handleKey = (e) => {
-      if (e.key === 'Escape') setCalendarMenuOpen(false);
-    };
-    document.addEventListener('mousedown', handleClick);
-    document.addEventListener('keydown', handleKey);
-    return () => {
-      document.removeEventListener('mousedown', handleClick);
-      document.removeEventListener('keydown', handleKey);
-    };
-  }, [calendarMenuOpen]);
 
   useEffect(() => {
     document.body.style.overflow = resultModal ? 'hidden' : '';
@@ -130,21 +111,17 @@ function App() {
       .toLowerCase();
     
     downloadICS(filteredRaces, `racing-calendar-${seriesNames}.ics`, getFeedName(selectedSeries));
-    setCalendarMenuOpen(false);
   };
 
-  const feedUrl = `${window.location.host}/${getFeedPath(selectedSeries)}`;
+  const feedUrl = `${window.location.origin}/${getFeedPath(selectedSeries)}`;
 
   const handleCopyFeedLink = async () => {
     try {
-      await navigator.clipboard.writeText(`${window.location.protocol}//${feedUrl}`);
+      await navigator.clipboard.writeText(feedUrl);
       setLinkCopied(true);
-      setTimeout(() => {
-        setLinkCopied(false);
-        setCalendarMenuOpen(false);
-      }, 1200);
+      setTimeout(() => setLinkCopied(false), 2000);
     } catch {
-      window.prompt('Copy this calendar link:', `${window.location.protocol}//${feedUrl}`);
+      window.prompt('Copy this calendar link:', feedUrl);
     }
   };
 
@@ -260,36 +237,21 @@ function App() {
               </small>
             </div>
             
-            <div className="calendar-menu-wrapper" ref={calendarMenuRef}>
-              <button 
-                className="download-button" 
-                onClick={() => setCalendarMenuOpen(open => !open)}
-                disabled={selectedSeries.length === 0}
-                aria-expanded={calendarMenuOpen}
-                aria-haspopup="menu"
-              >
-                📅 Add to Calendar {calendarMenuOpen ? '▴' : '▾'}
-              </button>
+            <button 
+              className="download-button" 
+              onClick={handleDownload}
+              disabled={selectedSeries.length === 0}
+            >
+              📅 Download ICS
+            </button>
 
-              {calendarMenuOpen && selectedSeries.length > 0 && (
-                <div className="calendar-menu" role="menu">
-                  <button className="calendar-menu-item" role="menuitem" onClick={handleDownload}>
-                    ⬇️ Download .ics file
-                  </button>
-                  <a
-                    className="calendar-menu-item"
-                    role="menuitem"
-                    href={`webcal://${feedUrl}`}
-                    onClick={() => setCalendarMenuOpen(false)}
-                  >
-                    🔔 Subscribe (Apple / Outlook)
-                  </a>
-                  <button className="calendar-menu-item" role="menuitem" onClick={handleCopyFeedLink}>
-                    {linkCopied ? '✓ Link copied' : '🔗 Copy subscribe link (Google)'}
-                  </button>
-                </div>
-              )}
-            </div>
+            <button 
+              className="download-button subscription-button" 
+              onClick={handleCopyFeedLink}
+              disabled={selectedSeries.length === 0}
+            >
+              {linkCopied ? '✓ Link Copied' : '🔗 Subscription Link'}
+            </button>
             
             <div className="download-info">
               <small>
