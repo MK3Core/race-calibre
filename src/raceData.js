@@ -2,7 +2,7 @@
 // All times stored in UTC for proper timezone conversion
 
 // Last Updated Time
-export const LAST_UPDATED = '2026-03-18T22:37:00-05:00';
+export const LAST_UPDATED = '2026-10-26T16:15:00-04:00';
 
 export const racingSeries = {
   f1: {
@@ -28,6 +28,7 @@ export const racingSeries = {
       { name: 'Italian Grand Prix', location: 'Monza', dateTimeUTC: '2026-09-06T13:00:00Z', timezone: 'Europe/Rome' },
       { name: 'Spanish Grand Prix', location: 'Madrid', dateTimeUTC: '2026-09-13T13:00:00Z', timezone: 'Europe/Madrid' },
       { name: 'Azerbaijan Grand Prix', location: 'Baku', dateTimeUTC: '2026-09-26T11:00:00Z', timezone: 'Asia/Baku' },
+      { name: 'Bahrain Grand Prix', location: 'Sepang', dateTimeUTC: '2026-10-04T07:00:00Z', timezone: 'Asia/Kuala_Lumpur' }, // Relocated to Malaysia
       { name: 'Singapore Grand Prix', location: 'Singapore', dateTimeUTC: '2026-10-11T12:00:00Z', timezone: 'Asia/Singapore' },
       { name: 'United States Grand Prix', location: 'Austin', dateTimeUTC: '2026-10-25T19:00:00Z', timezone: 'America/Chicago' },
       { name: 'Mexico City Grand Prix', location: 'Mexico City', dateTimeUTC: '2026-11-01T19:00:00Z', timezone: 'America/Mexico_City' },
@@ -53,7 +54,7 @@ export const racingSeries = {
       { name: 'Road America', location: 'Elkhart Lake', dateTimeUTC: '2026-08-02T16:00:00Z', endDateTimeUTC: '2026-08-02T22:00:00Z', timezone: 'America/Chicago' }, // 6hr race
       { name: 'VIRginia International Raceway', location: 'Alton', dateTimeUTC: '2026-08-23T17:00:00Z', timezone: 'America/New_York' },
       { name: 'Indianapolis Motor Speedway', location: 'Indianapolis', dateTimeUTC: '2026-09-20T17:00:00Z', timezone: 'America/Indiana/Indianapolis' },
-      { name: 'Petit Le Mans', location: 'Braselton', dateTimeUTC: '2026-10-10T16:00:00Z', endDateTimeUTC: '2026-10-11T02:00:00Z', timezone: 'America/New_York' }, // 10hr race
+      { name: 'Petit Le Mans', location: 'Braselton', dateTimeUTC: '2026-10-03T16:10:00Z', endDateTimeUTC: '2026-10-04T02:10:00Z', timezone: 'America/New_York' }, // 10hr race
     ]
   },
   wec: {
@@ -69,7 +70,9 @@ export const racingSeries = {
       { name: '6 Hours of São Paulo', location: 'São Paulo', dateTimeUTC: '2026-07-12T15:00:00Z', endDateTimeUTC: '2026-07-12T21:00:00Z', timezone: 'America/Sao_Paulo' }, // 6hr race
       { name: 'Lone Star Le Mans', location: 'Austin', dateTimeUTC: '2026-09-06T19:00:00Z', endDateTimeUTC: '2026-09-07T01:00:00Z', timezone: 'America/Chicago' }, // 6hr race
       { name: '6 Hours of Fuji', location: 'Fuji', dateTimeUTC: '2026-09-27T02:00:00Z', endDateTimeUTC: '2026-09-27T08:00:00Z', timezone: 'Asia/Tokyo' }, // 6hr race
-      { name: '8 Hours of Bahrain', location: 'Sakhir', dateTimeUTC: '2026-11-07T11:00:00Z', endDateTimeUTC: '2026-11-07T19:00:00Z', timezone: 'Asia/Bahrain' }, // 8hr race
+      { name: '6 Hours of Barcelona', location: 'Barcelona', dateTimeUTC: '2026-10-18T10:00:00Z', endDateTimeUTC: '2026-10-18T16:00:00Z', timezone: 'Europe/Madrid' }, // 6hr race
+      { name: '8 Hours of Bahrain', location: 'Sakhir', dateTimeUTC: '2026-11-07T11:00:00Z', endDateTimeUTC: '2026-11-07T19:00:00Z', timezone: 'Asia/Bahrain', cancelled: true }, // 8hr race
+      { name: '6 Hours of Monza', location: 'Monza', dateTimeUTC: '2026-11-08T10:00:00Z', endDateTimeUTC: '2026-11-08T16:00:00Z', timezone: 'Europe/Rome' }, // 6hr race
     ]
   },
   wrc: {
