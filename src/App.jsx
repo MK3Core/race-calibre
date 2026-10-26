@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { racingSeries, getRacesBySeries, LAST_UPDATED } from './raceData';
 import { raceResults } from './raceResults';
 import { getCarByNumber } from './raceTeams';
-import { downloadICS } from './calendarUtils';
+import { downloadICS, getFeedPath, getFeedName } from './calendarUtils';
 import { getUserTimezone, commonTimezones, formatRaceDateTime, getTimezoneAbbr } from './timezoneUtils';
 import './App.css';
 
@@ -11,6 +11,7 @@ function App() {
   const [userTimezone, setUserTimezone] = useState(getUserTimezone());
   const [currentTime, setCurrentTime] = useState(new Date());
   const [resultModal, setResultModal] = useState(null); // { race, result }
+  const [linkCopied, setLinkCopied] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = resultModal ? 'hidden' : '';
@@ -109,7 +110,19 @@ function App() {
       .join('-')
       .toLowerCase();
     
-    downloadICS(filteredRaces, `racing-calendar-${seriesNames}.ics`);
+    downloadICS(filteredRaces, `racing-calendar-${seriesNames}.ics`, getFeedName(selectedSeries));
+  };
+
+  const feedUrl = `${window.location.host}/${getFeedPath(selectedSeries)}`;
+
+  const handleCopyFeedLink = async () => {
+    try {
+      await navigator.clipboard.writeText(`${window.location.protocol}//${feedUrl}`);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    } catch {
+      window.prompt('Copy this calendar link:', `${window.location.protocol}//${feedUrl}`);
+    }
   };
 
   function isMonthPast(races) {
@@ -239,6 +252,21 @@ function App() {
                   : `${filteredRaces.length} race${filteredRaces.length !== 1 ? 's' : ''} selected`}
               </small>
             </div>
+
+            {selectedSeries.length > 0 && (
+              <div className="subscribe-section">
+                <a className="subscribe-button" href={`webcal://${feedUrl}`}>
+                  🔔 Subscribe
+                </a>
+                <button className="copy-link-button" onClick={handleCopyFeedLink}>
+                  {linkCopied ? '✓ Copied' : '🔗 Copy Link'}
+                </button>
+                <small className="subscribe-info">
+                  Subscribed calendars update automatically when schedules change.
+                  For Google Calendar, copy the link and add it under Other calendars → From URL.
+                </small>
+              </div>
+            )}
           </div>
         </aside>
 

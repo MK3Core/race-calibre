@@ -376,6 +376,48 @@ body {
   letter-spacing: 0.01em;
 }
 
+.subscribe-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.subscribe-button,
+.copy-link-button {
+  padding: 0.75rem;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+[data-theme="dark"] .subscribe-button,
+[data-theme="dark"] .copy-link-button {
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subscribe-button:hover,
+.copy-link-button:hover {
+  background: var(--bg-card);
+}
+
+.subscribe-info {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
 /* Main Content */
 .main-content {
   flex: 1;
